@@ -1,0 +1,40 @@
+.board{
+    float: right;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .styling {
+    border: 1px solid black;
+    background-color: lightblue;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    text-align: center;
+  }
+
+  .player{
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    margin: 2px;
+    border-radius: 50%;
+  }
+
+  .snakesandladders{
+    font-size: xx-small;
+    text-align: left;
+  }

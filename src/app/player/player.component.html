@@ -1,0 +1,11 @@
+<div class="players">
+<div *ngFor="let player of players; let i = index" class="styling">
+    <h1>{{"Player "+ (i+1)}}</h1>
+    <div class="position">{{"Position: "+(player.position)}}</div>
+    <button [disabled]="!player.isActive" (click)="play(player)">Play</button>
+</div>
+<div class="styling">{{"Rolled number: "+dice}}</div>
+<div class="styling">
+    <button (click)="reset()" class="reset">Reset</button>
+</div>
+</div>

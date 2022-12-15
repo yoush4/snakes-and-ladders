@@ -1,0 +1,29 @@
+<div class="board" class="styling">
+    <h1>Board</h1>
+    <tbody>
+        <div class="grid-container">
+        <ng-container *ngFor="let row of board.slice(0, board.length / n % 1 === 0 ? board.length / n : board.length / n + 1); let idx = index">
+            <ng-container *ngFor="let x of board.slice(idx * n, idx * n + n);">
+                <div class="grid-item">
+                    
+                    <ng-container *ngFor="let snake of snakes, let i=index">
+                        <span *ngIf="snake.start == x" class="snakesandladders">Snake head {{i}}</span>
+                        <span *ngIf="snake.destination == x" class="snakesandladders">Snake tail {{i}}</span>
+                    </ng-container>
+                    <ng-container *ngFor="let ladder of ladders, let i=index">
+                        <span *ngIf="ladder.start == x" class="snakesandladders">Ladder start {{i}}</span>
+                        <span *ngIf="ladder.destination == x" class="snakesandladders">Ladder end {{i}}</span>
+                    </ng-container>
+
+                    <span *ngIf="players[0].position == x" class="player" style="background-color: red;"></span>
+                    <span *ngIf="players[1].position == x" class="player" style="background-color: blueviolet;"></span>
+                    <!-- <ng-container *ngFor="let player of players">
+                        ngIf iterate over players(add a colour attribute to player interface)
+                    </ng-container> -->
+                    {{x}}
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
+    </tbody>
+</div>

@@ -12,3 +12,17 @@
     text-align: center;
   }
 
+  .styling {
+    border: 1px solid black;
+    background-color: lightblue;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    text-align: center;
+  }
+  
+
+  .players{
+    float: left;
+  }
